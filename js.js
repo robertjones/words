@@ -76,9 +76,9 @@ const numclick = (option, ans) => {
 var Game = {
   view: () => {
     return m("div", [
-      m("p", {class: "", style: "font-size: 6rem;"}, prob.ans.word),
+      m("p", {class: "text-gray-900", style: "font-size: 6rem;"}, prob.ans.word),
       m("table", {class: "self-center mx-auto my-2"},  
-        [0,1].map(x => m("tr", prob.options.slice(x*2, x*2 + 2).map(option => m("td",  {class: "p-1"}, m("button", {onclick: () => numclick(option.pic, prob.ans.pic), style: "width: 9rem", class: dis.includes(option.pic) ? "bg-red-500 hover:bg-red-700 text-white font-bold text-6xl rounded py-1" : "bg-blue-500 hover:bg-blue-700 text-white font-bold text-6xl rounded py-1"}, dis.includes(option.pic) ? "❌" : option.pic)))
+        [0,1].map(x => m("tr", prob.options.slice(x*2, x*2 + 2).map(option => m("td",  {class: "p-2"}, m("button", {onclick: () => numclick(option.pic, prob.ans.pic), style: "width: 8rem", class: dis.includes(option.pic) ? "bg-red-200 text-gray-800 font-semibold text-6xl rounded py-2 shadow-md border border-red-500" : "bg-white text-gray-800 font-semibold text-6xl rounded border border-blue-400 py-2 shadow-md"}, dis.includes(option.pic) ? "❌" : option.pic)))
         )
       )),
       m("p", {class: "text-4xl"}, msg)

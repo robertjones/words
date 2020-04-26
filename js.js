@@ -81,7 +81,7 @@ var Game = {
         [0,1].map(x => m("tr", prob.options.slice(x*2, x*2 + 2).map(option => m("td",  {class: "p-2"}, m("button", {onclick: () => numclick(option.pic, prob.ans.pic), style: "width: 8rem", class: dis.includes(option.pic) ? "bg-red-200 text-gray-800 font-semibold text-6xl rounded py-2 shadow-md border border-red-500" : "bg-white text-gray-800 font-semibold text-6xl rounded border border-blue-400 py-2 shadow-md"}, dis.includes(option.pic) ? "❌" : option.pic)))
         )
       )),
-      m("p", {class: "text-4xl"}, msg)
+      m("p", {class: "text-6xl"}, msg)
     ])
   }
 }
